@@ -37,7 +37,7 @@ In order to see how useful partials are and how exactly to use them, what we'll 
 
 **Getting the starter code ready**
 
-- Fork and clone this git repo
+- Fork and clone [this git repo](https://git.generalassemb.ly/Software-Engineering-Immersive-Remote/ejs-partials)
 - run `npm install` inside the directory to install all then necessary packages for this project
 - `code .` inside the directory to open it up in vscode
 - `nodemon` inside the directory to run the project
