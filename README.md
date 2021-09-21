@@ -38,10 +38,10 @@ In order to see how useful partials are and how exactly to use them, what we'll 
 **Getting the starter code ready**
 
 - Fork and clone this git repo
-- run `npm install` so you install all then necessary packages for this project
+- run `npm install` inside the directory to install all then necessary packages for this project
 - `code .` inside the directory to open it up in vscode
-- `nodemon` to run the project
-- in your browser, go to `http://localhost:3000/pub` - you should see a landing page that looks like the image below
+- `nodemon` inside the directory to run the project
+- in your browser, go to [http://localhost:3000/pub](http://localhost:3000/pub) - you should see a landing page that looks like the image below
 
 ---
 
@@ -81,8 +81,8 @@ Right now, only our `index` view has styling. That's not a good look, so let's c
 <title>gitPub</title>
 <!-- ============= FONTS ============= -->
 <link
-	href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap"
-	rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap"
+  rel="stylesheet"
 />
 <!-- ============= STYLES ============= -->
 <link rel="stylesheet" href="/css/styles.css" />
@@ -91,7 +91,7 @@ Right now, only our `index` view has styling. That's not a good look, so let's c
 Now if we save and refresh our index, the CSS is gone! Oh no! But, no worries, we saved all that code in our `head.ejs` partial, and now all we need to do to utilize that partial is `include` it back into the head of our index.ejs using the following syntax:
 
 ```ejs
-<% include ./partials/head.ejs %>
+ <%- include('./partials/head.ejs')%>
 ```
 
 Make sure you've saved all your files and refresh your index -- voila! Our CSS is back! We've successfully included our partial.
@@ -115,18 +115,18 @@ Let's do the same thing we just did:
 
 ```html
 <header>
-	<h1>gitPub.io</h1>
-	<ul>
-		<li><a href="/pub">master branch</a></li>
-		<li><a href="/new">git add -an item</a></li>
-	</ul>
+  <h1>gitPub.io</h1>
+  <ul>
+    <li><a href="/pub">master branch</a></li>
+    <li><a href="/new">git add -an item</a></li>
+  </ul>
 </header>
 ```
 
 - Include the header partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
 
 ```ejs
-<% include ./partials/header.ejs %>
+ <%- include('./partials/header.ejs')%>
 ```
 
 ### Creating the footer partial
@@ -138,15 +138,15 @@ Our ejs files are looking so much cleaner already! But there's one more repetiti
 
 ```html
 <footer>
-	<span>℗ 2019</span>
-	<span>FORKED FRMO STAMFORD.</span>
+  <span>℗ 2019</span>
+  <span>FORKED FRMO STAMFORD.</span>
 </footer>
 ```
 
 - Include the footer partial in: `index.ejs`, `new.ejs`, `showDrinks.ejs`, `showFood.ejs`
 
 ```ejs
-<% include ./partials/footer.ejs %>
+ <%- include('./partials/footer.ejs')%>
 ```
 
 Sweet, our code looks so DRY! And -- oh, wait there's a typo in our footer. Let's fix that up.
