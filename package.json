@@ -1,7 +1,7 @@
 {
   "name": "gitpub",
   "version": "1.0.0",
-  "description": "",
+  "description": "![partials](https://i.imgur.com/AgbJAmF.png)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1"
-  }
+    "express": "^4.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salasousi/ejs-partials.git"
+  },
+  "bugs": {
+    "url": "https://github.com/salasousi/ejs-partials/issues"
+  },
+  "homepage": "https://github.com/salasousi/ejs-partials#readme",
+  "devDependencies": {}
 }
