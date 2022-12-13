@@ -50,6 +50,7 @@ app.get('/pub', (req, res) => {
 	res.render('index.ejs', {
 		drinks: drinks,
 		food: food,
+		tabTitle: "Master Branch"
 	})
 })
 
@@ -57,6 +58,7 @@ app.get('/pub', (req, res) => {
 app.get('/drinks/:id', (req, res) => {
 	res.render('showDrinks.ejs', {
 		drink: drinks[req.params.id],
+		tabTitle: "fooBar()"
 	})
 })
 
@@ -64,12 +66,15 @@ app.get('/drinks/:id', (req, res) => {
 app.get('/food/:id', (req, res) => {
 	res.render('showFood.ejs', {
 		food: food[req.params.id],
+		tabTitle: "fooD()"
 	})
 })
 
 // get new
 app.get('/new', (req, res) => {
-	res.render('new.ejs')
+	res.render('new.ejs', {
+		tabTitle: "Git Add"
+	})
 })
 
 // =======================
